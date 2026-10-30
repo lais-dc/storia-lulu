@@ -1,8 +1,8 @@
-const caixaPrincipal = dicument.querySelector(".caixa-pricipal");
-const caixaPerguntas = dicument.querySelector(".caixa-perguntas");
-const caixaAlternativas = dicument.querySelector(".caixa-alternativas");
-const caixaResultado = dicument.querySelector(".caixa-resultado");
-const textoResultado = dicument.querySelector(".texto-resultado");
+const caixaPrincipal = document.querySelector(".caixa-pricipal");
+const caixaPerguntas = document.querySelector(".caixa-perguntas");
+const caixaAlternativas = document.querySelector(".caixa-alternativas");
+const caixaResultado = document.querySelector(".caixa-resultado");
+const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
