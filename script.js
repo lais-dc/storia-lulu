@@ -6,17 +6,41 @@ const textoResultado = dicument.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Pergunta 1",
+        enunciado: "desempate entre jefferson ou burr",
         alternativas: [
-            "alternativa 1",
-            "alternativa 2,"
+            "Jefferson",
+            "Burr"
         ]
     },
     {
-        enunciado: "Pergunta 2",
+        enunciado: "eleição governador de nova york",
         alternativas: [
-            "alternativa 1",
-            "alternativa 2,"
+            "apoiar a campanha de lewis",
+            "apoiar vigorosamente campanha contra burr"
         ]
-    }
+    },
+    {
+        enunciado: "duelo Hamilton-Burr",
+        alternativas: [
+            "atirar parar cima",
+            "atirar em Burr"
+        ]
+    },
+    {
+        enunciado: "morte de hamilton",
+        alternativas: [
+            "levar hamilton até um hospital",
+            "deixa-lo por si só no local"
+        ]
+    },
 ];
+
+let atual = 0;
+let perguntaAtual;
+
+function mostraPergunta() {
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+}
+
+mostraPergunta();
