@@ -8,29 +8,59 @@ const perguntas = [
     {
         enunciado: "desempate entre jefferson ou burr",
         alternativas: [
-            "Jefferson",
-            "Burr"
+            {
+                texto: " Jefferson",
+                afirmação: "afirmação"
+            },
+            {
+                texto: "Burr",
+                afirmação: "afirmação"
+            }
+            
         ]
     },
     {
         enunciado: "eleição governador de nova york",
         alternativas: [
-            "apoiar a campanha de lewis",
-            "apoiar vigorosamente campanha contra burr"
+            {
+                texto: "apoiar a campanha de lewis",
+                afirmação: "afirmação"
+            },
+            {
+                texto: "apoiar vigorosamente campanha contra burr",
+                afirmação: "afirmação"
+            }
+            
+            
         ]
     },
     {
         enunciado: "duelo Hamilton-Burr",
         alternativas: [
-            "atirar parar cima",
-            "atirar em Burr"
+            {
+                texto: "atirar parar cima",
+                afirmação: "afirmação"
+            },
+            {
+                texto: "atirar em Burr",
+                afirmação: "afirmação"
+            }
+            
+            
         ]
     },
     {
         enunciado: "morte de hamilton",
         alternativas: [
-            "levar hamilton até um hospital",
-            "deixa-lo por si só no local"
+            {
+                texto: "levar hamilton até um hospital",
+                afirmação: "afirmação"
+            },
+            {
+                texto: "deixa-lo por si só no local",
+                afirmação: "afirmação"
+            }
+            
         ]
     },
 ];
@@ -41,6 +71,17 @@ let perguntaAtual;
 function mostraPergunta() {
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+    mostraAlternativas();
 }
+
+function mostraAlternativas(){
+    for (const alternativa of perguntaAtual.alternativas) {
+        const botaoAlternativa = document.createElement("button");
+        botaoAlternativa.textContent = alternativa.texto;
+        caixaAlternativas.appendChild(botaoAlternativa);
+
+    }
+}
+
 
 mostraPergunta();
